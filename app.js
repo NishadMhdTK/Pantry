@@ -4,5 +4,6 @@ const Logger = require('./logger');
 const logger = new Logger();
 
 const server = http.createServer();
+server.on('connection', (socket) => {});
 server.listen(3000);
 logger.log("Server running at port 3000")
